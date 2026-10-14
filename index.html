@@ -54,6 +54,8 @@ select:focus,input:focus,textarea:focus{outline:2px solid var(--say);outline-off
 .home .wall{flex-direction:row;flex-wrap:wrap;min-height:0;gap:6px} .home .note{--nbg:var(--saybg);border-left-color:var(--say);font-size:14px}
 .empty{color:var(--ink3);font-size:14px;align-self:center}
 .foot{margin-top:10px;font-size:13px;color:var(--ink3);display:flex;gap:16px;flex-wrap:wrap}
+.qr{position:fixed;right:18px;bottom:14px;background:#fff;border:1px solid var(--rule);border-radius:8px;padding:8px 8px 6px;text-align:center;font-size:12px;color:var(--ink2);box-shadow:0 2px 8px rgba(18,22,28,.08)}
+.qr img{display:block;width:132px;height:132px}
 @media (max-width:900px){.grid{grid-template-columns:1fr} .card{min-height:0}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 </style>
@@ -101,7 +103,8 @@ select:focus,input:focus,textarea:focus{outline:2px solid var(--say);outline-off
 </div>
 </header>
 <div class="grid" id="grid"></div>
-<div class="foot"><span id="status">連線中</span><span>手機填卡：本頁網址（不加 #board）</span></div>
+<div class="foot"><span id="status">連線中</span><span>手機掃右下角 QR 填卡</span></div>
+<div class="qr"><img alt="填卡 QR code" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMYAAADGCAIAAAAG+WgKAAAEAUlEQVR4nO3dMW7jSBBAUc9ib6Bgor3/wSbaQGfwHIAJQfzuLhnvxR7Z0ny0UCDZ/ev7+/sLOv+ErwWSomeVIiYpYpIiJilikiImKWKSIiYpYpIi9u+dH3r9/u/rnPf/fx78Pdd/dcf1lZ+9TvUZPnvv69z5NKxSxCRFTFLEJEVMUpyY+K6qOWjdZPTMujnxvewTm/Z/YZUiJilikiImKWKSYsbEd3ZSu3Plq5rdnv09d+y8UrlzcrRKEZMUMUkRkxQxSTF14tvp7J2N66a51/j3dYdVipikiEmKmKSISYrYR0581axUTVjPrjC+lj0zeJZVipikiEmKmKSISYqpE9/ZaaWaAZ/dL3r9mdf4/VXWsUoRkxQxSRGTFDFJMWPiOzvRPLs6tvMuync0OT67VniWVYqYpIhJipikiEmK2K9PPIG9ekpu2r4orx9xn6dVipikiEmKmKSISYoTE9+z61M7771ctxPmzuuAZ58ZrD4xqxQxSRGTFDFJEZMUn/Mc352n255NK584XV5NO0e++sSsUsQkRUxSxCRFTFKcmPh2XkVaNwfdse63v6PZtnrv696pVYqYpIhJipikiEmKn3VX5x3T9ldZ9/lU1k2F7urkAF98xCRFTFLEJMWMnVvO7ip5dpfLdXuwvI5OzdWcaJUiJilikiImKWKSYurEd7XuOuD8a47vH/Eunv0uqxQxSRGTFDFJEZMUn3yN79krT7tr8c7rzD/Xz8THx/DFR0xSxCRFTFKc2Lll59NtZ3dlqf7Ve+NMum5nTju3MIIvPmKSIiYpYpJi6ukM0+423HliwvzTGa7WTdZWKSTFbFYpYpIiJilm3NV5Ne20u3XXsNZdd3tF8+bOezivrFLEJEVMUsQkRUxSfM5dnVdndyY5e5b6Tmfvp7VKEZMUMUkRkxQxSTH1BPazpw/M37nlFV2/mzZdXlmliEmKmKSISYqYpPhZ5/FNO1lv2lnqO7nGx1C++IhJipikiEmKqc/x7bRzLvup1xyfcR4fB/jiIyYpYpIiJilmPMe307prfJWzzwy+lz1TaecWRvDFR0xSxCRFTFLMOJ1h2ql5lere1HXXJedfc7RKEZMUMUkRkxQxSTH1PL6d+//vfP5u3Xx3x7p7U9dN1lYpYpIiJilikiImKT7nBPZ1ds53z37mHU2y6/7mdfedWqWISQpJMZtVipikiH3kxHd2F9Czd7S+l52UYa9OhvLFR0xSxCRFTFJMnfh2Pl/27Ny6s6fGvx79PTvnOzu3MJQvPmKSIiYpYpJixsQ3bW/Mna989oS+18bZ7RmrFDFJEZMUMUkRkxSxjzyPj8msUsQkRUxSxCRFTFLEJEVMUsQkRUxSxCRFTFJ8tf4CJlYcUayKnOEAAAAASUVORK5CYII="><div>掃碼填觀察員卡</div></div>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
